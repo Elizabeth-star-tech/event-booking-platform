@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tukio | Discover and Book Events</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+  <a href="#home" class="logo">Tukio</a>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">&#9776;</button>
+
+  <nav id="nav-menu">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#events">Events</a>
+    <a href="#booking">Book Tickets</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html" id="auth-link">Login</a>
+    <button id="theme-toggle" class="theme-toggle">Dark mode</button>
+  </nav>
+</header>
+
+  <main>
+  <section id="home" class="hero">
+  <p class="hero-label">Concerts, workshops, festivals and more</p>
+  <h1>Find your next unforgettable experience</h1>
+  <p class="hero-text">Browse upcoming events, pick your tickets and book in minutes.</p>
+
+  <div class="countdown-box" id="countdown-box" hidden>
+    <p class="countdown-label">Next up: <strong id="countdown-name"></strong></p>
+    <div class="countdown">
+      <div><span id="cd-days">0</span><small>Days</small></div>
+      <div><span id="cd-hours">0</span><small>Hours</small></div>
+      <div><span id="cd-minutes">0</span><small>Minutes</small></div>
+      <div><span id="cd-seconds">0</span><small>Seconds</small></div>
+    </div>
+  </div>
+
+  <a href="#events" class="btn">Explore events</a>
+  <a href="#booking" class="btn btn-outline">Book tickets</a>
+</section>
+
+    <section id="featured">
+  <h2>Coming Up Next</h2>
+  <div id="featured-grid" class="featured-grid"></div>
+</section>
+
+    <section id="categories">
+  <h2>Browse by Category</h2>
+  <div id="category-grid" class="category-grid"></div>
+  <p class="see-all"><a href="categories.html" class="details-link">See all categories and their events &rarr;</a></p>
+</section>
+
+  <section id="events">
+  <h2>Upcoming Events</h2>
+
+  <div class="event-filters">
+    <input type="text" id="event-search" placeholder="Search events by name">
+
+    <select id="category-filter" aria-label="Filter by category">
+      <option value="all">All categories</option>
+      <option value="Concert">Concert</option>
+      <option value="Workshop">Workshop</option>
+      <option value="Festival">Festival</option>
+      <option value="Seminar">Seminar</option>
+    </select>
+
+    <select id="type-filter" aria-label="Filter by ticket type">
+      <option value="all">Free and paid</option>
+      <option value="free">Free only</option>
+      <option value="paid">Paid only</option>
+    </select>
+
+    <div class="date-filter">
+      <label for="date-filter">From date</label>
+      <input type="date" id="date-filter">
+    </div>
+
+    <button type="button" id="reset-filters" class="reset-btn">Reset</button>
+  </div>
+
+  <p id="event-count" class="event-count"></p>
+  <p id="no-events" class="no-events" hidden>No events match your search. Try changing the filters.</p>
+
+  <div id="event-grid" class="event-grid"></div>
+</section>
+
+    
+<section id="booking">
+  <h2>Book Your Tickets</h2>
+  <p class="form-intro">Choose an event, tell us how many tickets you need and we will reserve them for you.</p>
+
+  <form id="booking-form" novalidate>
+    <div class="form-group">
+      <label for="book-name">Full name</label>
+      <input type="text" id="book-name" placeholder="e.g. Jane Wanjiku">
+      <small class="error" id="book-name-error"></small>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="book-phone">Phone number</label>
+        <input type="tel" id="book-phone" placeholder="e.g. 0712345678">
+        <small class="error" id="book-phone-error"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="book-email">Email</label>
+        <input type="email" id="book-email" placeholder="e.g. jane@example.com">
+        <small class="error" id="book-email-error"></small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book-event">Choose an event</label>
+      <select id="book-event">
+        <option value="">Select an event</option>
+      </select>
+      <small class="error" id="book-event-error"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="book-tickets">Number of tickets (1 to 10)</label>
+      <input type="number" id="book-tickets" min="1" max="10" value="1">
+      <small class="error" id="book-tickets-error"></small>
+    </div>
+
+    <p class="booking-total">Total: <strong id="booking-total">Select an event</strong></p>
+
+    <button type="submit" class="btn btn-submit">Submit booking request</button>
+  </form>
+
+  <p id="booking-success" class="success" hidden></p>
+</section>
+  </main>
+
+  <footer id="contact">
+  <div class="footer-content">
+    <div>
+      <h3>Tukio</h3>
+      <p>Discover and book concerts, workshops, festivals and seminars in one place.</p>
+    </div>
+
+    <div>
+  <h3>Contact us</h3>
+  <p>Phone: +254 700 000 000</p>
+  <p>Email: hello@tukio.example</p>
+  <p>Nairobi, Kenya</p>
+  <a href="admin.html">Admin dashboard</a>
+</div>
+
+    <div>
+      <h3>Follow us</h3>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+  </div>
+
+  <p class="copyright">&copy; 2026 Tukio. All rights reserved.</p>
+</footer>
+<script src="js/events.js"></script>
+<script src="js/listing.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/featured.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/auth-nav.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

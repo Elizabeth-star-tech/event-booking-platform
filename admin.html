@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Tukio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Tukio Admin</a>
+    <nav class="simple-nav">
+      <a href="index.html">View website</a>
+    </nav>
+  </header>
+
+  <main class="admin-page">
+    <h1>Dashboard</h1>
+    <p class="admin-note">Demo dashboard. It shows bookings saved in this browser.</p>
+
+    <div id="stats" class="stats-grid"></div>
+
+    <h2>Events</h2>
+    <div class="table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Bookings</th>
+            <th>Tickets sold</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody id="events-table-body"></tbody>
+      </table>
+    </div>
+
+    <h2>Bookings</h2>
+    <p id="no-bookings" hidden>No bookings yet. Bookings made on the website will appear here.</p>
+    <div class="table-wrap" id="bookings-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Customer</th>
+            <th>Event</th>
+            <th>Tickets</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-table-body"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p class="copyright">&copy; 2026 Tukio. All rights reserved.</p>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

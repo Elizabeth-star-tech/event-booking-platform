@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | Tukio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Tukio</a>
+    <nav class="simple-nav">
+      <a href="index.html#events">Back to events</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="payment-page">
+
+      <div id="payment-missing" hidden>
+        <h2>Booking not found</h2>
+        <p>We could not find that booking. Please make a booking first.</p>
+        <a href="index.html#booking" class="btn">Go to booking</a>
+      </div>
+
+      <div id="payment-content" class="payment-layout" hidden>
+        <div class="pay-card">
+          <h1>Complete your payment</h1>
+          <p class="demo-note">Demo only: no real payment is taken. Please do not enter real card details.</p>
+
+          <div class="pay-tabs">
+            <button type="button" class="pay-tab active" id="method-card">Card</button>
+            <button type="button" class="pay-tab" id="method-mpesa">M-Pesa</button>
+          </div>
+
+          <form id="card-form" novalidate>
+            <div class="form-group">
+              <label for="card-name">Name on card</label>
+              <input type="text" id="card-name" placeholder="e.g. Jane Wanjiku" autocomplete="off">
+              <small class="error" id="card-name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="card-number">Card number</label>
+              <input type="text" id="card-number" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" autocomplete="off">
+              <small class="error" id="card-number-error"></small>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="card-expiry">Expiry (MM/YY)</label>
+                <input type="text" id="card-expiry" inputmode="numeric" maxlength="5" placeholder="MM/YY" autocomplete="off">
+                <small class="error" id="card-expiry-error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="card-cvv">CVV</label>
+                <input type="password" id="card-cvv" inputmode="numeric" maxlength="4" placeholder="123" autocomplete="off">
+                <small class="error" id="card-cvv-error"></small>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="card-pay-btn">Pay now</button>
+          </form>
+
+          <form id="mpesa-form" novalidate hidden>
+            <p class="mpesa-help">Enter your M-Pesa number. In a real system you would get a prompt on your phone to enter your PIN.</p>
+
+            <div class="form-group">
+              <label for="mpesa-phone">M-Pesa phone number</label>
+              <input type="tel" id="mpesa-phone" placeholder="e.g. 0712345678">
+              <small class="error" id="mpesa-phone-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="mpesa-pay-btn">Pay now</button>
+          </form>
+        </div>
+
+        <aside class="pay-summary" id="pay-summary"></aside>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p class="copyright">&copy; 2026 Tukio. All rights reserved.</p>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/payment.js"></script>
+</body>
+</html>

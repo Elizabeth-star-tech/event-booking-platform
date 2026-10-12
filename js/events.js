@@ -1,0 +1,141 @@
+const eventsData = [
+  {
+    id: 1,
+    name: "Nairobi Jazz Night",
+    category: "Concert",
+    date: "2026-11-07",
+    time: "7:00 PM",
+    venue: "Savannah Grounds",
+    location: "Nairobi",
+    price: 1500,
+    image: "images/event1.jpg",
+    description: "An evening of live jazz with local and guest artists under the open sky.",
+    fullDescription: "Join us for a relaxed night of live jazz featuring five bands, from classic swing to modern fusion. Bring a blanket, grab a drink from the food stalls and enjoy the music.",
+    schedule: [
+      { time: "6:00 PM", activity: "Gates open and food stalls" },
+      { time: "7:00 PM", activity: "Opening act" },
+      { time: "8:30 PM", activity: "Headline performance" },
+      { time: "10:30 PM", activity: "Closing set" }
+    ],
+    organizer: "Tukio Live Events",
+    organizerContact: "live@tukio.example",
+    venueDetails: "Open-air grounds with seating, parking and food stalls. Wheelchair accessible.",
+    ticketInfo: "Tickets are non-refundable. Children under 12 enter free with an adult."
+  },
+  {
+    id: 2,
+    name: "Web Design Workshop",
+    category: "Workshop",
+    date: "2026-11-14",
+    time: "9:00 AM",
+    venue: "Innovation Hub",
+    location: "Nairobi",
+    price: 2000,
+    image: "images/event2.jpg",
+    description: "A hands-on day of building your first responsive website from scratch.",
+    fullDescription: "Learn HTML, CSS and JavaScript basics and leave with a working website. No experience needed. Bring your own laptop.",
+    schedule: [
+      { time: "9:00 AM", activity: "Welcome and setup" },
+      { time: "10:00 AM", activity: "HTML and CSS fundamentals" },
+      { time: "1:00 PM", activity: "Lunch break" },
+      { time: "2:00 PM", activity: "Adding interactivity with JavaScript" },
+      { time: "4:30 PM", activity: "Show and tell" }
+    ],
+    organizer: "CodeBridge Academy",
+    organizerContact: "hello@codebridge.example",
+    venueDetails: "Training room with Wi-Fi and power sockets. Lunch is not included.",
+    ticketInfo: "Seats are limited to 40. Bring your own laptop and charger."
+  },
+  {
+    id: 3,
+    name: "Taste of Africa Food Festival",
+    category: "Festival",
+    date: "2026-11-21",
+    time: "11:00 AM",
+    venue: "City Park",
+    location: "Nairobi",
+    price: 500,
+    image: "images/event3.jpg",
+    description: "A day of street food, cooking demos and live music from across the continent.",
+    fullDescription: "Sample dishes from more than 40 vendors, watch live cooking demonstrations and enjoy music and dance performances all day. Fun for the whole family.",
+    schedule: [
+      { time: "11:00 AM", activity: "Festival opens" },
+      { time: "1:00 PM", activity: "Chef cooking demo" },
+      { time: "3:00 PM", activity: "Live music and dance" },
+      { time: "7:00 PM", activity: "Closing" }
+    ],
+    organizer: "Savour Events",
+    organizerContact: "info@savour.example",
+    venueDetails: "Large public park with shaded seating, toilets and a children's play area.",
+    ticketInfo: "Entry only. Food and drinks are paid for at each stall."
+  },
+  {
+    id: 4,
+    name: "Youth Entrepreneurship Seminar",
+    category: "Seminar",
+    date: "2026-11-28",
+    time: "10:00 AM",
+    venue: "Grand Conference Hall",
+    location: "Nairobi",
+    price: 0,
+    image: "images/event4.jpg",
+    description: "Practical talks and a panel on starting and growing a small business.",
+    fullDescription: "Hear from young founders about their first customers, funding and mistakes. The day ends with a networking session and a Q&A panel.",
+    schedule: [
+      { time: "10:00 AM", activity: "Registration" },
+      { time: "10:30 AM", activity: "Keynote talk" },
+      { time: "12:00 PM", activity: "Panel discussion" },
+      { time: "2:00 PM", activity: "Networking session" }
+    ],
+    organizer: "Startup Kenya Network",
+    organizerContact: "events@startupnetwork.example",
+    venueDetails: "Air-conditioned hall with 300 seats and a coffee area.",
+    ticketInfo: "Free entry, but registration is required to reserve a seat."
+  },
+  {
+    id: 5,
+    name: "Afrobeats Live Concert",
+    category: "Concert",
+    date: "2026-12-05",
+    time: "8:00 PM",
+    venue: "Arena Stadium",
+    location: "Nairobi",
+    price: 3500,
+    image: "images/event5.jpg",
+    description: "The biggest Afrobeats names on one stage for a night of non-stop dancing.",
+    fullDescription: "Five hours of live Afrobeats with top artists, DJs and a full light show. VIP tickets include a front-of-stage area and a drink.",
+    schedule: [
+      { time: "6:00 PM", activity: "Doors open" },
+      { time: "8:00 PM", activity: "DJ warm-up" },
+      { time: "9:00 PM", activity: "Main performances" },
+      { time: "12:30 AM", activity: "Finale" }
+    ],
+    organizer: "BigStage Entertainment",
+    organizerContact: "tickets@bigstage.example",
+    venueDetails: "Covered stadium with seating, security and on-site parking.",
+    ticketInfo: "Tickets are non-refundable. Valid ID is required at the gate."
+  },
+  {
+    id: 6,
+    name: "Photography Masterclass",
+    category: "Workshop",
+    date: "2026-12-12",
+    time: "9:30 AM",
+    venue: "Art Studio Gallery",
+    location: "Nairobi",
+    price: 2500,
+    image: "images/event6.jpg",
+    description: "Learn composition, lighting and editing from a professional photographer.",
+    fullDescription: "A full-day class covering camera settings, natural light and editing basics, including a practical photo walk. Suitable for beginners and hobbyists.",
+    schedule: [
+      { time: "9:30 AM", activity: "Camera basics" },
+      { time: "11:30 AM", activity: "Composition and light" },
+      { time: "1:30 PM", activity: "Photo walk" },
+      { time: "3:30 PM", activity: "Editing and feedback" }
+    ],
+    organizer: "Lens & Light Studio",
+    organizerContact: "classes@lenslight.example",
+    venueDetails: "Bright gallery space with tables, projector and refreshments.",
+    ticketInfo: "Bring a camera or a smartphone. Tea and coffee are included."
+  }
+];
